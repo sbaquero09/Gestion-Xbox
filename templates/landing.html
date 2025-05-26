@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Reservas Xbox</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Landing Styles -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+</head>
+<body>
+<div class="landing-container animate-on-scroll">
+    <!-- Hero Section -->
+    <section class="hero-section text-center py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4 glow-title">Sistema de Reservas Xbox</h1>
+                    <p class="lead mb-4">Agenda tu tiempo de juego en las consolas Xbox de la biblioteca de manera rápida y sencilla.</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="{{ url_for('index') }}" class="btn btn-success btn-lg px-4 py-2 ripple glow-hover">
+                            <i class="fas fa-gamepad me-2"></i>Ir al Sistema
+                        </a>
+                        <a href="#features" class="btn btn-outline-light btn-lg px-4 py-2 ripple scroll-button">
+                            <i class="fas fa-info-circle me-2"></i>Información
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <img src="{{ url_for('static', filename='Untitled.png') }}" alt="Logo Xbox" style="width: 400px;"class="img-fluid hero-image floating-image"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section py-5">
+        <div class="container py-5">
+            <h2 class="text-center mb-5">Beneficios del Sistema</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card p-4 text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-clock fa-3x text-success"></i>
+                        </div>
+                        <h3>Reservas en Tiempo Real</h3>
+                        <p>Consulta la disponibilidad actualizada de las consolas y agenda tu turno al instante.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card p-4 text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-mobile-alt fa-3x text-success"></i>
+                        </div>
+                        <h3>Compatible con Todos tus Dispositivos</h3>
+                        <p>Diseño responsive para una experiencia fluida en cualquier pantalla.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card p-4 text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-calendar-check fa-3x text-success"></i>
+                        </div>
+                        <h3>Gestión Eficiente</h3>
+                        <p>Edita o cancela tus reservas fácilmente sin ayuda externa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo Funciona -->
+<section class="how-it-works py-5">
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <!-- Imagen -->
+      <div class="col-lg-6 order-lg-2">
+        <img src="https://usbcali.edu.co/wp-content/uploads/2024/11/Copia-de-Sin-titulo.png"
+             alt="Proceso Xbox"
+             class="img-fluid rounded shadow-lg floating-image"
+             style="max-height: 400px;">
+      </div>
+
+      <!-- Texto con título más grande -->
+      <div class="col-lg-6 order-lg-1 mt-5 mt-lg-0">
+        <h2 class="display-6 fw-bold">¿Cómo funciona?</h2>
+        <p>
+          El sistema permite a los estudiantes de la universidad reservar el uso del Xbox en horarios disponibles.
+        </p>
+        <p>
+          Solo debes iniciar sesión, revisar el calendario de disponibilidad y reservar un turno.
+          Cada turno es de una hora y solo puede haber una reserva por horario.
+        </p>
+        <p>
+          ¡Así garantizamos el uso justo y organizado del equipo para todos!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- PASOS -->
+  <div class="container py-5">
+  <div class="row">
+    <!-- Columna izquierda -->
+    <div class="col-lg-6 d-flex flex-column gap-4">
+      <div class="step animate-step visible">
+        <div class="step-number bg-success">1</div>
+        <div class="step-content">
+          <h4>Regístrate</h4>
+          <p>Ingresa con tu correo institucional de la Universidad San Buenaventura.</p>
+        </div>
+      </div>
+      <div class="step animate-step visible">
+        <div class="step-number bg-success">2</div>
+        <div class="step-content">
+          <h4>Consulta disponibilidad</h4>
+          <p>Revisa los horarios disponibles para las consolas Xbox.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Columna derecha -->
+    <div class="col-lg-6 d-flex flex-column gap-4">
+      <div class="step animate-step visible">
+        <div class="step-number bg-success">3</div>
+        <div class="step-content">
+          <h4>Reserva tu turno</h4>
+          <p>Selecciona la fecha y hora de tu preferencia y confirma tu reserva.</p>
+        </div>
+      </div>
+      <div class="step animate-step visible">
+        <div class="step-number bg-success">4</div>
+        <div class="step-content">
+          <h4>Disfruta tu juego</h4>
+          <p>Preséntate en la biblioteca con tu reserva confirmada.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- Call to Action -->
+    <section class="cta-section py-5 text-center">
+        <div class="container py-5 pulse-container">
+            <h2 class="text-white mb-4">Reserva tu tiempo de juego ahora</h2>
+            <p class="lead text-white mb-5">Accede al sistema y asegura tu turno en las consolas Xbox de la biblioteca.</p>
+            <a href="{{ url_for('index') }}" class="btn btn-light btn-lg px-5 py-3 ripple glow-hover">
+                <i class="fas fa-arrow-right me-2"></i> Ir al Sistema
+            </a>
+        </div>
+    </section>
+
+    <!-- Sobre el Proyecto -->
+    <section class="about-section py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="https://usbcali.edu.co/wp-content/uploads/2023/11/7b544f992f3a3f5a95533582648acad0-1.png" alt="Biblioteca USB" class="img-fluid rounded shadow-lg floating-image">
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <h2>Sobre el Proyecto</h2>
+                    <p>Desarrollado para mejorar la experiencia de los estudiantes de la Universidad San Buenaventura al reservar consolas Xbox en la biblioteca.</p>
+                    <p>Este sistema busca optimizar los recursos, facilitar la gestión y fortalecer la imagen de la universidad como una institución innovadora.</p>
+                    <div class="team-section mt-4">
+                        <h5 class="mb-3">Desarrollado por:</h5>
+                        <ul class="list-unstyled team-members">
+                            <li><i class="fas fa-user me-2"></i>John Sebastian Viana Vargas</li>
+                            <li><i class="fas fa-user me-2"></i>Samuel Echeverri Bolaños</li>
+                            <li><i class="fas fa-user me-2"></i>Sebastian Baquero Alvarez</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- FontAwesome -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+<!-- JS personalizado -->
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

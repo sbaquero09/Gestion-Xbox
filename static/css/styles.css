@@ -1,0 +1,259 @@
+:root {
+    --xbox-green: #107c10;
+    --xbox-dark: #0e0e0e;
+    --xbox-light: #f5f5f5;
+    --xbox-accent: #5bc0de;
+    --xbox-danger: #d9534f;
+    --xbox-warning: #f0ad4e;
+    --xbox-success: #5cb85c;
+    --xbox-card-bg: #1a1a1a;
+    --xbox-input-bg: #2d2d2d;
+}
+
+body {
+    background-color: var(--xbox-dark);
+    color: var(--xbox-light);
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(16, 124, 16, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(16, 124, 16, 0.1) 0%, transparent 20%);
+}
+
+/* Container principal */
+.main-container {
+    background-color: var(--xbox-card-bg);
+    border-radius: 16px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    padding: 2.5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Tipografía */
+h1, h2, h3 {
+    font-weight: 700;
+    color: var(--xbox-light);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: var(--xbox-green);
+    border-radius: 2px;
+}
+
+/* Botones */
+.btn {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background-color: var(--xbox-green);
+}
+
+.btn-primary:hover {
+    background-color: #0e6a0e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(16, 124, 16, 0.3);
+}
+
+.btn-danger {
+    background-color: var(--xbox-danger);
+}
+
+.btn-warning {
+    background-color: var(--xbox-warning);
+    color: #333;
+}
+
+.btn-success {
+    background-color: var(--xbox-success);
+}
+
+.btn-lg {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 12px;
+}
+
+/* Formularios */
+.form-control {
+    background-color: var(--xbox-input-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--xbox-light);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: var(--xbox-input-bg);
+    border-color: var(--xbox-accent);
+    box-shadow: 0 0 0 0.25rem rgba(91, 192, 222, 0.25);
+    color: var(--xbox-light);
+}
+
+.form-label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--xbox-accent);
+}
+
+/* Tablas */
+.table {
+    color: var(--xbox-light);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table-dark {
+    background-color: var(--xbox-card-bg);
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+.table th {
+    background-color: var(--xbox-dark);
+    border-bottom: 2px solid var(--xbox-green);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.85rem;
+}
+
+.table td {
+    vertical-align: middle;
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Efectos de hover para tablas */
+.table-hover tbody tr {
+    transition: all 0.3s ease;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(16, 124, 16, 0.1);
+    transform: scale(1.01);
+}
+
+/* Alertas */
+.alert {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón Editar */
+.edit-btn {
+    background-color: black !important;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover {
+    background-color: var(--xbox-warning) !important; /* amarillo */
+    color: black;
+}
+
+/* Botón Eliminar */
+.delete-btn,
+.btn-delete {
+    background-color: black !important;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover,
+.btn-delete:hover {
+    background-color: var(--xbox-danger) !important; /* rojo */
+    color: white;
+}
+
+
+/* Efecto de carga */
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+.loading {
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-container {
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .btn-lg {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+    }
+    
+    .table-responsive {
+        border-radius: 12px;
+    }
+}
+
+/* Animaciones */
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Efecto de ripple para botones */
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}

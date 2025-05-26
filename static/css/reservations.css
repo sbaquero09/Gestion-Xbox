@@ -1,0 +1,169 @@
+/* Estilos para la página de reservas */
+:root {
+    --xbox-green: #107c10;
+    --xbox-dark-green: #0a4a0a;
+    --xbox-black: #121212;
+    --xbox-dark: #1e1e1e;
+    --xbox-light: #f5f5f5;
+}
+
+.reservations-container {
+    background-color: var(--xbox-black);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(16, 124, 16, 0.3);
+}
+
+.reservation-card {
+    border: 1px solid rgba(16, 124, 16, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--xbox-dark);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 2px solid var(--xbox-green);
+}
+
+.reservation-list {
+    background-color: var(--xbox-dark);
+}
+
+.reservation-item {
+    background-color: rgba(40, 40, 40, 0.7);
+    border-color: rgba(16, 124, 16, 0.1);
+    transition: all 0.3s ease;
+    padding: 1rem 1.5rem;
+}
+
+.reservation-item:hover {
+    background-color: rgba(16, 124, 16, 0.1);
+    transform: translateX(5px);
+}
+
+.student-id {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Botones */
+.add-reservation-btn {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.add-reservation-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(16, 124, 16, 0.3);
+}
+
+.btn-group .btn {
+    color: #ffffff;
+    border-radius: 6px !important;
+    margin: 0 3px;
+    transition: all 0.3s ease;
+}
+
+.edit-btn {
+    background-color: var(--xbox-warning);
+    border-color: var(--xbox-warning);
+    color: #ffffff;
+}
+
+.edit-btn:hover {
+    background-color: #e09d0b;
+    transform: scale(1.1);
+}
+
+.delete-btn {
+    background-color: var(--xbox-danger);
+    border-color: var(--xbox-danger);
+    color: #ffffff
+}
+
+.delete-btn:hover {
+    background-color: #c12b2b;
+    transform: scale(1.1);
+}
+
+/* Paginación */
+.page-link {
+    margin: 0 5px;
+    border-radius: 6px !important;
+    transition: all 0.3s ease;
+}
+
+.page-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(16, 124, 16, 0.2);
+}
+
+.page-item.active .page-link {
+    background-color: var(--xbox-green);
+    border-color: var(--xbox-green);
+}
+
+/* Animaciones */
+.animate-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .reservation-item .row > div {
+        padding: 0.5rem 0;
+    }
+    
+    .student-id {
+        display: inline-block;
+        margin-bottom: 0.5rem;
+    }
+    
+    .reservation-item .btn-group {
+        margin-top: 0.5rem;
+    }
+    
+    .reservation-card .card-header h5 {
+        font-size: 0.9rem;
+    }
+}
+
+/* Modal personalizado */
+.modal-content {
+    border: 1px solid var(--xbox-green);
+}
+
+.modal-header, .modal-footer {
+    border-color: rgba(16, 124, 16, 0.3) !important;
+}
+body {
+    background-color: #121212;
+}
+
+.list-group-item {
+    background-color: #121212 !important;
+    color: #fff !important;
+    border-color: #2a2a2a;
+}
+
+.reservation-item div,
+.reservation-item span,
+.reservation-item strong,
+.reservation-item i {
+    color: #fff !important;
+}
